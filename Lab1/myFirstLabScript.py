@@ -39,7 +39,8 @@ print(f"ID: {stuID}")
 print(f"Lab:{labGrade}")
 print(f"Midterm:{midtermGrade}")
 print(f"Final: {finalGrade}")
+print(f"General Score {generalScore}")
 
 #Question4
-
+print("*\n**\n***\n**\n*")
 
