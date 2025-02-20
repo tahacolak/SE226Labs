@@ -25,3 +25,21 @@ else:
 
 print(f"{var1} + {var2}={ sum}")
 print(f"{var1} * {var2}= { prod}")
+
+#Question3
+studentName=input("Please enter student name: ")
+labGrade=float(input("Enter Lab Grade: "))
+midtermGrade=float(input("Enter Midterm Grade: "))
+finalGrade=float(input("Enter Final Grade: "))
+
+generalScore=labGrade/4+midtermGrade*35/100+finalGrade*2/5
+
+print(f"Name: {studentName}")
+print(f"ID: {stuID}")
+print(f"Lab:{labGrade}")
+print(f"Midterm:{midtermGrade}")
+print(f"Final: {finalGrade}")
+
+#Question4
+
+
