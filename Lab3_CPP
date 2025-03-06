@@ -1,1 +1,108 @@
+//author:tahacolak
+#include <iostream>
+using namespace std;
+
+class Node {
+public:
+    int value;
+    Node* next;
+    
+    Node(int val) {
+        value = val;
+        next = nullptr;
+    }
+};
+
+class Queue {
+private:
+    Node* head;
+    Node* tail;
+    int length;
+    
+public:
+    Queue() {
+        head = nullptr;
+        tail = nullptr;
+        length = 0;
+    }
+    
+    void enqueue(int val) {
+        Node* newNode = new Node(val);
+        if (isEmpty()) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail->next = newNode;
+            tail = newNode;
+        }
+        length++;
+    }
+    
+    void dequeue() {
+        if (isEmpty()) {
+            cout << "Queue is empty." << endl;
+            return;
+        }
+        Node* temp = head;
+        head = head->next;
+        if (head == nullptr) {
+            tail = nullptr;
+        }
+        delete temp;
+        length--;
+    }
+    
+    int top() {
+        if (isEmpty()) {
+            return -1;
+        }
+        return head->value;
+    }
+    
+    bool isEmpty() {
+        return head == nullptr;
+    }
+    
+    int size() {
+        return length;
+    }
+    
+    void display() {
+        if (isEmpty()) {
+            cout << "Queue is empty." << endl;
+            return;
+        }
+        Node* temp = head;
+        cout << "Queue: ";
+        while (temp != nullptr) {
+            cout << temp->value << " ";
+            temp = temp->next;
+        }
+        cout << endl;
+    }
+};
+
+int main() {
+    Queue q;
+    
+    q.enqueue(461);
+    q.enqueue(24);
+    q.enqueue(231);
+    q.enqueue(58);
+    
+    q.display();
+    
+    cout << "Size: " << q.size() << endl;
+    cout << "Front: " << q.top() << endl;
+    
+    cout << "Dequeuing..." << endl;
+    q.dequeue();
+    
+    q.display();
+    
+    cout << "Size: " << q.size() << endl;
+    cout << "Front: " << q.top() << endl;
+    
+    return 0;
+}
 
