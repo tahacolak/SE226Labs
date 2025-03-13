@@ -22,17 +22,13 @@ int main() {
     
     
     cout << "Your ID is " << studentId <<endl;
-    
-    return 0;
-}
+
 
 //Question2
-#include <iostream>
-#include <stdio.h>
-using namespace std;
 
 
-int main() {
+
+
     double var1, var2;
     
     
@@ -54,16 +50,11 @@ int main() {
     cout << "diff = " << diff << endl;
     cout << "prod = " << prod << endl;
     
-    return 0;
-}
+ 
 
 //Question3
-#include <iostream>
-#include <string>
-#include <iomanip>  
-using namespace std;
 
-int main() {
+
     string studentName;
     double labGrade, midtermGrade, finalGrade, generalScore;
     
@@ -82,23 +73,19 @@ int main() {
    
     generalScore= (labGrade /4) + (midtermGrade *35/100) + (finalGrade *2/5);
     
-    cout << fixed << setprecision(1);
+    
     cout << "Name: " << studentName << endl;
     cout << "Lab: " << labGrade << endl;
     cout << "Midterm: " << midtermGrade << endl;
     cout << "Final: " << finalGrade << endl;
     cout << "General Score: " << generalScore << endl;
     
-    return 0;
-}
-//Question4
-#include <iostream>
-#include <string>
- 
-using namespace std;
 
-int main() {
+//Question4
+
+
     cout<<("*\n**\n***\n**\n*");
     
+   
     return 0;
 }
