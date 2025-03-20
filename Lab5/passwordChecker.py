@@ -39,4 +39,27 @@ for password in passwords:
             processed[i] = random.choice(letter_replacements[char])
     processed_passwords.append(''.join(processed))
 
+# 3. Categorize passwords as "strong" or "weak"
+categorized_passwords = {"STRONG PASSWORDS\t": [], "WEAK PASSWORDS\t": []}
+
+for original, processed in zip(passwords, processed_passwords):
     
+    replaced_count = sum(1 for orig, proc in zip(original, processed) if orig != proc)
+    
+    if replaced_count > 4:
+        categorized_passwords["STRONG PASSWORDS"].append(processed)
+    else:
+        categorized_passwords["WEAK PASSWORDS"].append(processed)
+
+
+# 4. Print out the categorized passwords
+print("Generated Passwords:\t")
+for category, pwd_list in categorized_passwords.items():
+    print(f"{category}:")
+    for pwd in pwd_list:
+        print(pwd)
+
+
+print("\nLetter replacements:\t")
+for letter, replacements in letter_replacements.items():
+    print(f"{letter}: {', '.join(replacements)}")
