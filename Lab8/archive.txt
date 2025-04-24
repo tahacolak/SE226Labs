@@ -1,0 +1,6 @@
+Book,B001,Deep Learning,2018,Ian Goodfellow,775
+Book,B002,Clean Code,2008,Robert C. Martin,464
+Article,A001,AI in Medicine,2021,Nature Medicine,10.1038/nm.1234
+Article,A002,Quantum Computing,2020,Science Advances,10.1126/sciadv.abc123
+Podcast,P001,The AI Podcast,2023,NVIDIA,45
+Podcast,P002,Lex Fridman Podcast,2022,Lex Fridman,90
